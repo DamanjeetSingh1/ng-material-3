@@ -2,6 +2,8 @@
 // Custom Theming for Angular Material
 // For more information: https://material.angular.io/guide/theming
 @use '@angular/material' as mat;
+// Material 3 (Experimental)
+@use "@angular/material-experimental" as matx;
 // Plus imports for other components in your app.
 
 // Include the common styles for Angular Material. We include this here so that you only
@@ -37,13 +39,50 @@ $material-2-dark-theme: mat.define-dark-theme(
   )
 );
 
+// Material 3 light theme
+$m3-light-theme: matx.define-theme(
+  (
+    color: (
+      theme-type: light,
+      primary: matx.$m3-rose-palette,
+      tertiary: matx.$m3-blue-palette,
+    ),
+    typography: (
+      brand-family: "Comic Sans",
+      bold-weight: 900,
+    ),
+    density: (
+      scale: -1,
+    ),
+  )
+);
+
+// Material 3 dark theme
+$m3-dark-theme: matx.define-theme(
+  (
+    color: (
+      theme-type: dark,
+      primary: matx.$m3-magenta-palette,
+      tertiary: matx.$m3-orange-palette,
+    ),
+  )
+);
+
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
 @include mat.all-component-themes($material-2-light-theme);
 
+.m3 {
+  @include mat.all-component-themes($m3-light-theme);
+}
+
 .dark {
   @include mat.all-component-colors($material-2-dark-theme);
+}
+
+.dark.m3 {
+  @include mat.all-component-themes($m3-dark-theme);
 }
 
 /* You can add global styles to this file, and also import other style files */
