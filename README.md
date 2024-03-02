@@ -2,7 +2,7 @@
 
 **Welcome to the Angular Material 3 Experimental Demo! 🌐**
 
-This project showcases the cutting-edge Angular Material (Material 3), currently in its experimental stage. Explore the seamless transition between Material 2 and Material 3, and witness the potential of the next-generation user interface.
+This project showcases the cutting-edge Angular Material (Material Design 3), currently in its experimental stage. Explore the seamless transition between Material 2 and Material 3, and witness the potential of the next-generation user interface.
 
 ## Features
 
