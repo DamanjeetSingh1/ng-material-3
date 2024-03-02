@@ -9,6 +9,7 @@ button {
 section {
     display: flex;
     gap: 1rem;
+    flex-wrap: wrap;
 }
 
 .form-fields {
@@ -23,4 +24,10 @@ section {
 .example-header-image {
   background-image: url("https://material.angular.io/assets/img/examples/shiba1.jpg");
   background-size: cover;
+}
+
+@media (max-width: 640px) {
+  .example-card {
+    max-width: 300px;
+  }
 }
